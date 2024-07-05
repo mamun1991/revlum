@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <!-- cdns -->
+        <!-- alpine js -->
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.0/dist/cdn.min.js"></script>
+        <!-- tailwindcss -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <!-- Inter -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    </head>
+    <body class="bg-[#F4F6F9] font-['Inter',_sans-serif]">
+        <main class="relative min-h-screen">
+            <!-- -==========navigation for mobile view============== -->
+            <div class="md:hidden fixed bottom-0 w-full z-50 bg-white">
+                <ul class="flex flex-wrap -mb-px gap-x-[4px] text-[10px] leading-[165%] text-[#354D6F]">
+                    <li class="flex-1">
+                        <a href="/activity.html" class="flex flex-col items-center justify-center py-4 gap-y-[4px]">
+                            <img src="assets/img/activity.svg" class="size-[24px]" />
+                            <span> Activity</span>
+                        </a>
+                    </li>
+                    <li class="flex-1">
+                        <a href="/checkin.html" class="flex flex-col items-center justify-center py-4 gap-y-[4px]">
+                            <img src="/assets/img/checkin.svg" class="size-[24px]" />
+                            <span> Check In</span>
+                        </a>
+                    </li>
+                    <li class="flex-1 flex justify-center -mt-[6px]">
+                        <a href="/home.html">
+                            <div
+                                class="flex flex-col items-center justify-center py-3 text-white rounded-xl gap-y-[4px] bg-gradient-to-b from-[#0D81EE] to-[#03C3EF] w-[74px]"
+                            >
+                                <img src="assets/img/reward-white.svg" class="size-[24px] text-white" />
+                                <span>Rewards</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="flex-1">
+                        <a href="/leaderboard.html" class="flex flex-col items-center justify-center py-4 gap-y-[4px]">
+                            <img src="/assets/img/leaderboard.svg" class="size-[24px]" />
+                            <span>Leaderboard</span>
+                        </a>
+                    </li>
+                    <li class="flex-1">
+                        <a href="/settings.html" class="flex flex-col items-center justify-center py-4 gap-y-[4px]">
+                            <img src="assets/img/settings.svg" class="size-[24px]" />
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- content -->
+            <div class="container mx-auto px-4 md:px-7 space-y-4 pb-32 md:pb-0">
+                <header class="py-3 md:pt-8">
+                    <a href="/home.html">
+                        <img src="/assets/img/logo.svg" alt="logo" class="w-[120px] h-[40px] min-w-[20px]" />
+                    </a>
+                </header>
+
+                <!-- desktop navigation -->
+                <div class="hidden md:block border-b border-[#354D6F33]">
+                    <ul class="flex flex-wrap items-center gap-x-2.5 -mb-px text-base font-semibold text-center text-[#354D6F]">
+                        <li class="flex-1">
+                            <a
+                                href="/home.html"
+                                class="flex items-center justify-center gap-x-1.5 py-2.5 px-4 border-b-4 text-[#0A99EF] border-[#0A99EF]"
+                            >
+                                <img src="/assets/img/arrow-left.svg" class="size-[24px]" />
+                                <span>Go back</span>
+                            </a>
+                        </li>
+                        <li class="flex-1 group">
+                            <a
+                                href="/checkin.html"
+                                class="flex items-center justify-center gap-x-1.5 py-2.5 px-4 border-b-4 border-transparent hover:text-[#0A99EF] hover:border-[#0A99EF]"
+                            >
+                                <img src="/assets/img/checkin.svg" class="size-[24px] block group-hover:hidden" />
+                                <img src="/assets/img/checkin-blue.svg" class="size-[24px] hidden group-hover:block" />
+                                <span>Check In</span>
+                            </a>
+                        </li>
+                        <li class="flex-1 group">
+                            <a
+                                href="/leaderboard.html"
+                                class="flex items-center justify-center gap-x-1.5 py-2.5 px-4 border-b-4 border-transparent hover:text-[#0A99EF] hover:border-[#0A99EF]"
+                            >
+                                <img src="/assets/img/leaderboard.svg" class="size-[24px] block group-hover:hidden" />
+                                <img src="/assets/img/leaderboard-blue.svg" class="size-[24px] hidden group-hover:block" />
+                                <span>Leaderboard</span>
+                            </a>
+                        </li>
+                        <li class="flex-1 group">
+                            <a
+                                href="/activity.html"
+                                class="flex items-center justify-center gap-x-1.5 py-2.5 px-4 border-b-4 border-transparent hover:text-[#0A99EF] hover:border-[#0A99EF]"
+                            >
+                                <img src="/assets/img/activity.svg" class="size-[24px] block group-hover:hidden" />
+                                <img src="/assets/img/activity-blue.svg" class="size-[24px] hidden group-hover:block" />
+                                <span>Activity</span>
+                            </a>
+                        </li>
+                        <li class="flex-1 group">
+                            <a
+                                href="/settings.html"
+                                class="flex items-center justify-center gap-x-1.5 py-2.5 px-4 border-b-4 border-transparent hover:text-[#0A99EF] hover:border-[#0A99EF]"
+                            >
+                                <img src="/assets/img/settings.svg" class="size-[24px] block group-hover:hidden" />
+                                <img src="/assets/img/settings-blue.svg" class="size-[24px] hidden group-hover:block" />
+                                <span>Settings</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="w-full space-y-5">
+                    <!-- Offer Details Grid 1 -->
+                    <div class="grid gap-y-5 md:grid-cols-2 md:gap-x-12">
+                        <!-- Offer Details -->
+                        <div class="space-y-3 md:space-y-7">
+                            <div class="flex items-center gap-x-[14px]">
+                                <img src="assets/img/cardimage.png" class="w-[66px] h-[66px] min-w-[66px] rounded-2xl overflow-hidden" />
+                                <div>
+                                    <h1 class="text-[#354D6F] text-sm md:text-lg leading-[120%] font-bold">Wishing Well</h1>
+                                    <p class="text-[#354D6F] text-xs leading-[150%] md:text-[13px] text-opacity-80">
+                                        Open and make a minimum deposit of $10 or more.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+                                <div class="flex bg-white flex-col gap-y-1 justify-center items-center p-2.5 rounded-xl">
+                                    <p class="text-xs text-[#424B5A]">Rewards</p>
+                                    <div class="flex items-center gap-x-[4px]">
+                                        <span class="text-[18px] md:text-[22px] font-bold text-[#424B5A]">3283</span>
+                                        <img src="/assets/img/bitcoin.svg" class="size-[22px] min-w-[22px] md:w-[24px] md:min-w-[24px]" />
+                                    </div>
+                                </div>
+                                <div class="hidden md:flex bg-white flex-col gap-y-1 justify-center items-center p-2.5 rounded-xl">
+                                    <p class="text-xs text-[#424B5A]">Devices</p>
+                                    <div class="flex items-center">
+                                        <img src="/assets/img/device.svg" class="size-[22px] min-w-[22px] md:w-[24px] md:min-w-[24px]" />
+                                    </div>
+                                </div>
+                                <div class="flex bg-white flex-col gap-y-1 justify-center items-center p-2.5 rounded-xl">
+                                    <p class="text-xs text-[#424B5A]">Experience</p>
+                                    <div class="flex items-center gap-x-[4px]">
+                                        <span class="text-[18px] md:text-[22px] font-bold text-[#424B5A]">1029</span>
+                                        <img src="/assets/img/calendar.svg" class="size-[22px] min-w-[22px] md:w-[24px] md:min-w-[24px]" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- start offer button -->
+                            <button
+                                class="hidden w-full rounded-xl bg-[#0A99EF] text-white text-base py-2 md:flex items-center justify-center leading-4 font-bold"
+                            >
+                                Start the Offer
+                            </button>
+                        </div>
+
+                        <!-- QR Code -->
+                        <div class="space-y-4">
+                            <div class="pb-5 border-b border-[#354D6F]/15 w-full">
+                                <h2 class="text-[#354D6F] text-base leading-[120%] font-bold">QR Code</h2>
+                            </div>
+                            <div class="flex items-center gap-x-6 p-4 bg-white rounded-xl">
+                                <img src="assets/img/qrcode.svg" class="min-w-[111px] size-[111px]" alt="QR Code" />
+                                <div class="space-y-4">
+                                    <h4 class="text-base text-[#354D6F] font-semibold leading-[120%]">QR code</h4>
+                                    <p class="text-[#354D6F] text-[13px] leading-[150%]">Scan the QR with your Android device</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Offer Details Grid 2 -->
+                    <div class="grid gap-y-5 md:grid-cols-2 md:gap-x-12">
+                        <!-- Steps -->
+                        <div class="space-y-4">
+                            <div class="pb-5 border-b border-[#354D6F]/15 w-full">
+                                <h2 class="text-[#354D6F] text-base leading-[120%] font-bold">Steps</h2>
+                            </div>
+                            <div class="space-y-[8px]">
+                                <div class="bg-white rounded-xl px-2.5 py-2 flex items-center gap-x-[10px]">
+                                    <div class="flex justify-center items-center size-[28px] min-w-[28px] text-center">
+                                        <p class="text-[#354D6F] text-xs font-semibold">1</p>
+                                    </div>
+                                    <div class="grow">
+                                        <h1 class="text-[#354D6F] text-sm leading-[150%] font-semibold">First Ship</h1>
+                                        <p class="text-[#354D6F]/80 text-[13px] leading-[150%]">
+                                            Play at least 8 battles to get your first warship <br />
+                                            with in-game currency.
+                                        </p>
+                                    </div>
+                                    <div class="flex items-center gao-x-[6px] px-2.5 py-1.5">
+                                        <img src="assets/img/coin-gray.svg" class="size-[18px] min-w-[18px]" alt="Coin" />
+                                        <span class="text-[#354D6F] text-sm leading-4 font-bold">2420</span>
+                                    </div>
+                                </div>
+                                <div class="bg-white rounded-xl px-2.5 py-2 flex items-center gap-x-[10px]">
+                                    <div class="flex justify-center items-center size-[28px] min-w-[28px] text-center">
+                                        <p class="text-[#354D6F] text-xs font-semibold">2</p>
+                                    </div>
+                                    <div class="grow">
+                                        <h1 class="text-[#354D6F] text-sm leading-[150%] font-semibold">Second Ship</h1>
+                                        <p class="text-[#354D6F]/80 text-[13px] leading-[150%]">
+                                            Play at least 8 battles to get your first warship <br />
+                                            with in-game currency.
+                                        </p>
+                                    </div>
+                                    <div class="flex items-center gao-x-[6px] px-2.5 py-1.5">
+                                        <img src="assets/img/coin-gray.svg" class="size-[18px] min-w-[18px]" alt="Coin" />
+                                        <span class="text-[#354D6F] text-sm leading-4 font-bold">4840</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Guideliness -->
+                        <div class="space-y-4">
+                            <div class="pb-5 border-b border-[#354D6F]/15 w-full">
+                                <h2 class="text-[#354D6F] text-base leading-[120%] font-bold">Guideliness</h2>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-y-4 md:gap-x-5">
+                                <div class="flex flex-col items-center justify-center bg-white p-5 rounded-xl gap-y-4">
+                                    <img src="assets/img/p2e-1.svg" class="size-[30px]" alt="QR Code" />
+                                    <div class="space-y-2 text-center">
+                                        <h1 class="text-base text-[#354D6F] font-bold">Emulators</h1>
+                                        <p class="text-[#354D6F] text-sm">Avoid emulators, VPNs, or proxies for accurate tracking.</p>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col items-center justify-center bg-white p-5 rounded-xl gap-y-4">
+                                    <img src="assets/img/p2e-2.svg" class="size-[30px]" alt="QR Code" />
+                                    <div class="space-y-2 text-center">
+                                        <h1 class="text-base text-[#354D6F] font-bold">Reward</h1>
+                                        <p class="text-[#354D6F] text-sm">Rewards are usually prompt but may take up to 72 hours.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- start offer button mobile -->
+            <div class="w-full px-5 md:hidden fixed bottom-[90px]">
+                <button
+                    class="w-full max-w-[608px] mx-auto rounded-xl bg-[#0A99EF] text-white text-base py-2 flex items-center justify-center leading-4 font-bold"
+                >
+                    Start the Offer
+                </button>
+            </div>
+        </main>
+    </body>
+</html>

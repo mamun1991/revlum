@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <!-- cdns -->
+        <!-- alpine js -->
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.0/dist/cdn.min.js"></script>
+        <!-- tailwindcss -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <!-- Inter -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    </head>
+    <body class="bg-[#F4F6F9] font-['Inter',_sans-serif]">
+        <main class="relative min-h-screen">
+            <!-- -==========navigation for mobile view============== -->
+            <div class="md:hidden fixed bottom-0 w-full z-50 bg-white">
+                <ul class="flex flex-wrap -mb-px gap-x-[4px] text-[10px] leading-[165%] text-[#354D6F]">
+                    <li class="flex-1 flex justify-center -mt-[6px]">
+                        <a href="/activity.html">
+                            <div
+                                class="flex flex-col items-center justify-center py-3 text-white rounded-xl gap-y-[4px] bg-gradient-to-b from-[#0D81EE] to-[#03C3EF] w-[74px]"
+                            >
+                                <img src="/assets/img/activity-white.svg" class="size-[24px] text-white" />
+                                <span>Activity</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="flex-1">
+                        <a href="/checkin.html" class="flex flex-col items-center justify-center py-4 gap-y-[4px]">
+                            <img src="/assets/img/checkin.svg" class="size-[24px]" />
+                            <span> Check In</span>
+                        </a>
+                    </li>
+                    <li class="flex-1">
+                        <a href="/home.html" class="flex flex-col items-center justify-center py-4 gap-y-[4px]">
+                            <img src="/assets/img/reward-gray.svg" class="size-[24px]" />
+                            <span>Rewards</span>
+                        </a>
+                    </li>
+                    <li class="flex-1">
+                        <a href="/leaderboard.html" class="flex flex-col items-center justify-center py-4 gap-y-[4px]">
+                            <img src="/assets/img/leaderboard.svg" class="size-[24px]" />
+                            <span>Leaderboard</span>
+                        </a>
+                    </li>
+                    <li class="flex-1">
+                        <a href="/settings.html" class="flex flex-col items-center justify-center py-4 gap-y-[4px]">
+                            <img src="/assets/img/setting.svg" class="size-[24px]" />
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- content -->
+            <div class="container mx-auto px-4 lg:px-9 space-y-5 md:space-y-9 pb-24 md:pb-10">
+                <header class="py-3 md:pt-8">
+                    <a href="/home.html">
+                        <img src="/assets/img/logo.svg" alt="logo" class="w-[120px] h-[40px] min-w-[20px]" />
+                    </a>
+                </header>
+
+                <!-- desktop navigation -->
+                <div class="hidden md:block border-b border-[#354D6F33]">
+                    <ul class="flex flex-wrap items-center gap-x-2.5 -mb-px text-base font-semibold text-center text-[#354D6F]">
+                        <li class="flex-1 group">
+                            <a
+                                href="/home.html"
+                                class="flex items-center justify-center gap-x-1.5 py-2.5 px-4 border-b-4 border-transparent hover:text-[#0A99EF] hover:border-[#0A99EF]"
+                            >
+                                <img src="/assets/img/reward-gray.svg" class="size-[24px] block group-hover:hidden" />
+                                <img src="/assets/img/reward.svg" class="size-[24px] hidden group-hover:block" />
+                                <span>Rewards</span>
+                            </a>
+                        </li>
+                        <li class="flex-1 group">
+                            <a
+                                href="/checkin.html"
+                                class="flex items-center justify-center gap-x-1.5 py-2.5 px-4 border-b-4 border-transparent hover:text-[#0A99EF] hover:border-[#0A99EF]"
+                            >
+                                <img src="/assets/img/checkin.svg" class="size-[24px] block group-hover:hidden" />
+                                <img src="/assets/img/checkin-blue.svg" class="size-[24px] hidden group-hover:block" />
+                                <span>Check In</span>
+                            </a>
+                        </li>
+                        <li class="flex-1">
+                            <a
+                                href="/leaderboard.html"
+                                class="flex items-center justify-center gap-x-1.5 py-2.5 px-4 border-b-4 text-[#0A99EF] border-[#0A99EF]"
+                            >
+                                <img src="/assets/img/leaderboard-blue.svg" class="size-[24px]" />
+                                <span>Leaderboard</span>
+                            </a>
+                        </li>
+                        <li class="flex-1 group">
+                            <a
+                                href="/activity.html"
+                                class="flex items-center justify-center gap-x-1.5 py-2.5 px-4 border-b-4 border-transparent hover:text-[#0A99EF] hover:border-[#0A99EF]"
+                            >
+                                <img src="/assets/img/activity.svg" class="size-[24px] block group-hover:hidden" />
+                                <img src="/assets/img/activity-blue.svg" class="size-[24px] hidden group-hover:block" />
+                                <span>Activity</span>
+                            </a>
+                        </li>
+
+                        <li class="flex-1 group">
+                            <a
+                                href="/settings.html"
+                                class="flex items-center justify-center gap-x-1.5 py-2.5 px-4 border-b-4 border-transparent hover:text-[#0A99EF] hover:border-[#0A99EF]"
+                            >
+                                <img src="/assets/img/settings.svg" class="size-[24px] block group-hover:hidden" />
+                                <img src="/assets/img/settings-blue.svg" class="size-[24px] hidden group-hover:block" />
+                                <span>Settings</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div
+                    class="bg-[url('/assets/img/leaderboard-bg-mobile.png')] md:bg-[url('/assets/img/leaderboard-bg-desktop.png')] h-[166px] md:h-[372px] w-full rounded-lg bg-cover bg-no-repeat relative overflow-hidden"
+                >
+                    <!-- leaderboard time ends on desktop -->
+                    <div class="mt-[60px] ml-[60px] text-center space-y-3 text-[#334D6E] hidden md:block md:w-fit">
+                        <p class="uppercase text-[13px] leading-[130%] font-medium">Leaderboard ends in</p>
+                        <div class="flex justify-center items-center gap-x-2">
+                            <div class="flex flex-col items-center gap-y-1">
+                                <div class="flex items-center gap-x-0.5">
+                                    <div class="rounded bg-white w-[36px] h-[40px] flex items-center justify-center">
+                                        <p class="text-xl leading-[24px] tracking-[0.25px]">1</p>
+                                    </div>
+                                    <div class="rounded bg-white w-[36px] h-[40px] flex items-center justify-center">
+                                        <p class="text-xl leading-[24px] tracking-[0.25px]">9</p>
+                                    </div>
+                                </div>
+                                <p class="text-xs leading-[14px] tracking-[0.2px]">Days</p>
+                            </div>
+
+                            <div class="flex flex-col items-center gap-y-1">
+                                <div class="flex items-center gap-x-0.5">
+                                    <div class="rounded bg-white w-[36px] h-[40px] flex items-center justify-center">
+                                        <p class="text-xl leading-[24px] tracking-[0.25px]">0</p>
+                                    </div>
+                                    <div class="rounded bg-white w-[36px] h-[40px] flex items-center justify-center">
+                                        <p class="text-xl leading-[24px] tracking-[0.25px]">2</p>
+                                    </div>
+                                </div>
+                                <p class="text-xs leading-[14px] tracking-[0.2px]">Hours</p>
+                            </div>
+
+                            <div class="flex flex-col items-center gap-y-1">
+                                <div class="flex items-center gap-x-0.5">
+                                    <div class="rounded bg-white w-[36px] h-[40px] flex items-center justify-center">
+                                        <p class="text-xl leading-[24px] tracking-[0.25px]">1</p>
+                                    </div>
+                                    <div class="rounded bg-white w-[36px] h-[40px] flex items-center justify-center">
+                                        <p class="text-xl leading-[24px] tracking-[0.25px]">4</p>
+                                    </div>
+                                </div>
+                                <p class="text-xs leading-[14px] tracking-[0.2px]">Minutes</p>
+                            </div>
+
+                            <div class="flex flex-col items-center gap-y-1">
+                                <div class="flex items-center gap-x-0.5">
+                                    <div class="rounded bg-white w-[36px] h-[40px] flex items-center justify-center">
+                                        <p class="text-xl leading-[24px] tracking-[0.25px]">4</p>
+                                    </div>
+                                    <div class="rounded bg-white w-[36px] h-[40px] flex items-center justify-center">
+                                        <p class="text-xl leading-[24px] tracking-[0.25px]">1</p>
+                                    </div>
+                                </div>
+                                <p class="text-xs leading-[14px] tracking-[0.2px]">Seconds</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <img
+                        src="/assets/img/right-win-trophy.svg"
+                        alt="trophy"
+                        class="h-[160px] md:h-[314px] absolute -bottom-[20px] md:bottom-0 -right-2 md:right-[60px]"
+                    />
+                </div>
+
+                <!-- winners card -->
+                <div class="!-mt-6 md:!-mt-24 max-w-[632px] mx-auto">
+                    <div class="grid grid-cols-3 items-end relative">
+                        <div
+                            class="absolute w-full rounded-xl md:rounded-[14px] h-[104px] md:h-[112px] bg-white bottom-0 z-0 shadow-[0px_4.4px_1.1px_0px_rgba(230,233,235,0.50)]"
+                        ></div>
+                        <div class="flex flex-col items-center gap-y-1.5 z-10 pb-3 md:pb-5">
+                            <div class="relative">
+                                <div
+                                    class="size-[74px] min-w-[74px] md:size-[116px] md:min-w-[116px] rounded-full border-[3.5px] md:border-[5px] border-[#009BD6] overflow-hidden"
+                                >
+                                    <img src="/assets/img/Ellipse 2.png" class="w-full h-full" alt="avatar" />
+                                </div>
+                                <div class="absolute -bottom-[5px] md:-bottom-2.5 -translate-x-1/2 left-1/2">
+                                    <div
+                                        class="rotate-45 size-[18px] md:size-[30px] rounded-md md:rounded-lgs bg-[#009BD6] flex items-center justify-center"
+                                    >
+                                        <p class="text-white font-semibold text-[9px] md:text-[13px] -rotate-45">2</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-[13px] md:text-sm md:leading-[17px] font-medium text-[#334D6E] mt-2 md:mt-3">Jackson</p>
+
+                            <p class="text-[16px] md:text-[17px] md:leading-[22px] font-bold text-[#009BD6]">1847</p>
+                        </div>
+
+                        <div class="z-10 bg-white rounded-t-[32px] shadow-[0px_0px_8.6px_0px_rgba(53,77,111,0.10)] pb-10">
+                            <div class="flex flex-col items-center gap-y-4 -mt-12 md:-mt-[90px]">
+                                <div class="relative">
+                                    <div class="absolute -top-[26px] md:-top-10 -translate-x-1/2 left-1/2">
+                                        <img src="/assets/img/crown.svg" alt="crown" class="h-[21px] md:h-[34px] w-auto" />
+                                    </div>
+                                    <div
+                                        class="size-[90px] md:size-[140px] min-w-[90px] md:min-w-[140px] rounded-full md:border-[5px] border-[#FFAA00] overflow-hidden"
+                                    >
+                                        <img src="/assets/img/Ellipse 1.png" class="w-full h-full" alt="avatar" />
+                                    </div>
+                                    <div class="absolute -bottom-[7px] md:-bottom-[12px] -translate-x-1/2 left-1/2">
+                                        <div
+                                            class="rotate-45 size-[18px] md:size-[30px] rounded-md md:rounded-lg bg-[#FFAA00] flex items-center justify-center"
+                                        >
+                                            <p class="text-white font-semibold text-[9px] md:text-[13px] -rotate-45">1</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text-[13px] md:text-sm md:leading-[17px] font-medium text-[#334D6E] mt-2 md:mt-3">Eiden</p>
+
+                                <p class="text-[16px] md:text-[17px] md:leading-[22px] font-bold text-[#FFAA00]">2430</p>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col items-center gap-y-1.5 z-10 pb-3 md:pb-5">
+                            <div class="relative">
+                                <div
+                                    class="size-[74px] min-w-[74px] md:size-[116px] md:min-w-[116px] rounded-full border-[3.5px] md:border-[5px] border-[#00D95F] overflow-hidden"
+                                >
+                                    <img src="/assets/img/Ellipse 2.png" class="w-full h-full" alt="avatar" />
+                                </div>
+                                <div class="absolute -bottom-[5px] md:-bottom-2.5 -translate-x-1/2 left-1/2">
+                                    <div
+                                        class="rotate-45 size-[18px] md:size-[30px] rounded-md md:rounded-lgs bg-[#00D95F] flex items-center justify-center"
+                                    >
+                                        <p class="text-white font-semibold text-[9px] md:text-[13px] -rotate-45">3</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-[13px] md:text-sm md:leading-[17px] font-medium text-[#334D6E] mt-2 md:mt-3">Emma Aria</p>
+
+                            <p class="text-[16px] md:text-[17px] md:leading-[22px] font-bold text-[#00D95F]">1674</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- leaderboard time ends on mobile -->
+                <div class="text-center space-y-3 text-[#334D6E] md:hidden">
+                    <p class="uppercase text-[13px] leading-[130%] font-medium">Leaderboard ends in</p>
+                    <div class="flex justify-center items-center gap-x-2">
+                        <div class="flex flex-col items-center gap-y-1">
+                            <div class="flex items-center gap-x-0.5">
+                                <div class="rounded bg-white w-[36px] h-[40px] flex items-center justify-center">
+                                    <p class="text-xl leading-[24px] tracking-[0.25px]">1</p>
+                                </div>
+                                <div class="rounded bg-white w-[36px] h-[40px] flex items-center justify-center">
+                                    <p class="text-xl leading-[24px] tracking-[0.25px]">9</p>
+                                </div>
+                            </div>
+                            <p class="text-xs leading-[14px] tracking-[0.2px]">Days</p>
+                        </div>
+
+                        <div class="flex flex-col items-center gap-y-1">
+                            <div class="flex items-center gap-x-0.5">
+                                <div class="rounded bg-white w-[36px] h-[40px] flex items-center justify-center">
+                                    <p class="text-xl leading-[24px] tracking-[0.25px]">0</p>
+                                </div>
+                                <div class="rounded bg-white w-[36px] h-[40px] flex items-center justify-center">
+                                    <p class="text-xl leading-[24px] tracking-[0.25px]">2</p>
+                                </div>
+                            </div>
+                            <p class="text-xs leading-[14px] tracking-[0.2px]">Hours</p>
+                        </div>
+
+                        <div class="flex flex-col items-center gap-y-1">
+                            <div class="flex items-center gap-x-0.5">
+                                <div class="rounded bg-white w-[36px] h-[40px] flex items-center justify-center">
+                                    <p class="text-xl leading-[24px] tracking-[0.25px]">1</p>
+                                </div>
+                                <div class="rounded bg-white w-[36px] h-[40px] flex items-center justify-center">
+                                    <p class="text-xl leading-[24px] tracking-[0.25px]">4</p>
+                                </div>
+                            </div>
+                            <p class="text-xs leading-[14px] tracking-[0.2px]">Minutes</p>
+                        </div>
+
+                        <div class="flex flex-col items-center gap-y-1">
+                            <div class="flex items-center gap-x-0.5">
+                                <div class="rounded bg-white w-[36px] h-[40px] flex items-center justify-center">
+                                    <p class="text-xl leading-[24px] tracking-[0.25px]">4</p>
+                                </div>
+                                <div class="rounded bg-white w-[36px] h-[40px] flex items-center justify-center">
+                                    <p class="text-xl leading-[24px] tracking-[0.25px]">1</p>
+                                </div>
+                            </div>
+                            <p class="text-xs leading-[14px] tracking-[0.2px]">Seconds</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- leaderboard table -->
+                <div class="grid md:grid-cols-2 gap-5">
+                    <div class="bg-white rounded-[10px] md:rounded-xl py-3 md:py-4 px-5 md:px-6 flex items-center gap-x-[32px] md:gap-x-[20px]">
+                        <div class="relative">
+                            <img
+                                src="/assets/img/crown-gray.svg"
+                                alt="crown"
+                                class="w-[26px] min-w-[26px] h-[21px] md:w-[39px] md:min-w-[39px] md:h-[24px]"
+                            />
+                            <p
+                                class="text-white text-[10px] md:text-xs md:leading-5 leading-[17px] font-bold absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2"
+                            >
+                                5
+                            </p>
+                        </div>
+
+                        <div class="grow flex items-center gap-x-3">
+                            <div class="size-[56px] min-w-[56px] md:size-[64px] md:min-w-[64px] rounded-full overflow-hidden">
+                                <img src="/assets/img/avatar.png" alt="avatar" class="w-full h-full" />
+                            </div>
+
+                            <div class="space-y-1 md:space-y-1.5">
+                                <p class="text-sm md:text-base md:-tracking-[0.6px] text-[#334D6E] font-semibold">Suraj Khandwal</p>
+                                <p class="text-xs md:text-sm text-[#334D6E]">Jaipur, Rajsthan</p>
+                            </div>
+                        </div>
+
+                        <p class="text-sm leading-6 md:text-xl text-[#334D6E] font-semibold">9300</p>
+                    </div>
+
+                    <div class="bg-white rounded-[10px] md:rounded-xl py-3 md:py-4 px-5 md:px-6 flex items-center gap-x-[32px] md:gap-x-[20px]">
+                        <div class="relative">
+                            <img
+                                src="/assets/img/crown-gray.svg"
+                                alt="crown"
+                                class="w-[26px] min-w-[26px] h-[21px] md:w-[39px] md:min-w-[39px] md:h-[24px]"
+                            />
+                            <p
+                                class="text-white text-[10px] md:text-xs md:leading-5 leading-[17px] font-bold absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2"
+                            >
+                                5
+                            </p>
+                        </div>
+
+                        <div class="grow flex items-center gap-x-3">
+                            <div class="size-[56px] min-w-[56px] md:size-[64px] md:min-w-[64px] rounded-full overflow-hidden">
+                                <img src="/assets/img/avatar.png" alt="avatar" class="w-full h-full" />
+                            </div>
+
+                            <div class="space-y-1 md:space-y-1.5">
+                                <p class="text-sm md:text-base md:-tracking-[0.6px] text-[#334D6E] font-semibold">Suraj Khandwal</p>
+                                <p class="text-xs md:text-sm text-[#334D6E]">Jaipur, Rajsthan</p>
+                            </div>
+                        </div>
+
+                        <p class="text-sm leading-6 md:text-xl text-[#334D6E] font-semibold">9300</p>
+                    </div>
+
+                    <div class="bg-white rounded-[10px] md:rounded-xl py-3 md:py-4 px-5 md:px-6 flex items-center gap-x-[32px] md:gap-x-[20px]">
+                        <div class="relative">
+                            <img
+                                src="/assets/img/crown-gray.svg"
+                                alt="crown"
+                                class="w-[26px] min-w-[26px] h-[21px] md:w-[39px] md:min-w-[39px] md:h-[24px]"
+                            />
+                            <p
+                                class="text-white text-[10px] md:text-xs md:leading-5 leading-[17px] font-bold absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2"
+                            >
+                                5
+                            </p>
+                        </div>
+
+                        <div class="grow flex items-center gap-x-3">
+                            <div class="size-[56px] min-w-[56px] md:size-[64px] md:min-w-[64px] rounded-full overflow-hidden">
+                                <img src="/assets/img/avatar.png" alt="avatar" class="w-full h-full" />
+                            </div>
+
+                            <div class="space-y-1 md:space-y-1.5">
+                                <p class="text-sm md:text-base md:-tracking-[0.6px] text-[#334D6E] font-semibold">Suraj Khandwal</p>
+                                <p class="text-xs md:text-sm text-[#334D6E]">Jaipur, Rajsthan</p>
+                            </div>
+                        </div>
+
+                        <p class="text-sm leading-6 md:text-xl text-[#334D6E] font-semibold">9300</p>
+                    </div>
+
+                    <div class="bg-white rounded-[10px] md:rounded-xl py-3 md:py-4 px-5 md:px-6 flex items-center gap-x-[32px] md:gap-x-[20px]">
+                        <div class="relative">
+                            <img
+                                src="/assets/img/crown-gray.svg"
+                                alt="crown"
+                                class="w-[26px] min-w-[26px] h-[21px] md:w-[39px] md:min-w-[39px] md:h-[24px]"
+                            />
+                            <p
+                                class="text-white text-[10px] md:text-xs md:leading-5 leading-[17px] font-bold absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2"
+                            >
+                                5
+                            </p>
+                        </div>
+
+                        <div class="grow flex items-center gap-x-3">
+                            <div class="size-[56px] min-w-[56px] md:size-[64px] md:min-w-[64px] rounded-full overflow-hidden">
+                                <img src="/assets/img/avatar.png" alt="avatar" class="w-full h-full" />
+                            </div>
+
+                            <div class="space-y-1 md:space-y-1.5">
+                                <p class="text-sm md:text-base md:-tracking-[0.6px] text-[#334D6E] font-semibold">Suraj Khandwal</p>
+                                <p class="text-xs md:text-sm text-[#334D6E]">Jaipur, Rajsthan</p>
+                            </div>
+                        </div>
+
+                        <p class="text-sm leading-6 md:text-xl text-[#334D6E] font-semibold">9300</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

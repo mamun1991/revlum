@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <!-- cdns -->
+        <!-- alpine js -->
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.0/dist/cdn.min.js"></script>
+        <!-- tailwindcss -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <!-- Inter -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    </head>
+    <body class="bg-[#F4F6F9] font-['Inter',_sans-serif]">
+        <main class="relative min-h-screen">
+            <!-- -==========navigation for mobile view============== -->
+            <div class="md:hidden fixed bottom-0 w-full z-50 bg-white">
+                <ul class="flex flex-wrap -mb-px gap-x-[4px] text-[10px] leading-[165%] text-[#354D6F]">
+                    <li class="flex-1 flex justify-center -mt-[6px]">
+                        <a href="/activity.html">
+                            <div
+                                class="flex flex-col items-center justify-center py-3 text-white rounded-xl gap-y-[4px] bg-gradient-to-b from-[#0D81EE] to-[#03C3EF] w-[74px]"
+                            >
+                                <img src="/assets/img/activity-white.svg" class="size-[24px] text-white" />
+                                <span>Activity</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="flex-1">
+                        <a href="/checkin.html" class="flex flex-col items-center justify-center py-4 gap-y-[4px]">
+                            <img src="/assets/img/checkin.svg" class="size-[24px]" />
+                            <span> Check In</span>
+                        </a>
+                    </li>
+                    <li class="flex-1">
+                        <a href="/home.html" class="flex flex-col items-center justify-center py-4 gap-y-[4px]">
+                            <img src="/assets/img/reward-gray.svg" class="size-[24px]" />
+                            <span>Rewards</span>
+                        </a>
+                    </li>
+                    <li class="flex-1">
+                        <a href="/leaderboard.html" class="flex flex-col items-center justify-center py-4 gap-y-[4px]">
+                            <img src="/assets/img/leaderboard.svg" class="size-[24px]" />
+                            <span>Leaderboard</span>
+                        </a>
+                    </li>
+                    <li class="flex-1">
+                        <a href="/settings.html" class="flex flex-col items-center justify-center py-4 gap-y-[4px]">
+                            <img src="/assets/img/setting.svg" class="size-[24px]" />
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- content -->
+            <div class="container mx-auto px-4 md:px-7 space-y-5 md:space-y-9">
+                <header class="py-3 md:pt-8">
+                    <a href="/home.html">
+                        <img src="/assets/img/logo.svg" alt="logo" class="w-[120px] h-[40px] min-w-[20px]" />
+                    </a>
+                </header>
+
+                <!-- desktop navigation -->
+                <div class="hidden md:block border-b border-[#354D6F33]">
+                    <ul class="flex flex-wrap items-center gap-x-2.5 -mb-px text-base font-semibold text-center text-[#354D6F]">
+                        <li class="flex-1 group">
+                            <a
+                                href="/home.html"
+                                class="flex items-center justify-center gap-x-1.5 py-2.5 px-4 border-b-4 border-transparent hover:text-[#0A99EF] hover:border-[#0A99EF]"
+                            >
+                                <img src="/assets/img/reward-gray.svg" class="size-[24px] block group-hover:hidden" />
+                                <img src="/assets/img/reward.svg" class="size-[24px] hidden group-hover:block" />
+                                <span>Rewards</span>
+                            </a>
+                        </li>
+                        <li class="flex-1 group">
+                            <a
+                                href="/checkin.html"
+                                class="flex items-center justify-center gap-x-1.5 py-2.5 px-4 border-b-4 border-transparent hover:text-[#0A99EF] hover:border-[#0A99EF]"
+                            >
+                                <img src="/assets/img/checkin.svg" class="size-[24px] block group-hover:hidden" />
+                                <img src="/assets/img/checkin-blue.svg" class="size-[24px] hidden group-hover:block" />
+                                <span>Check In</span>
+                            </a>
+                        </li>
+                        <li class="flex-1 group">
+                            <a
+                                href="/leaderboard.html"
+                                class="flex items-center justify-center gap-x-1.5 py-2.5 px-4 border-b-4 border-transparent hover:text-[#0A99EF] hover:border-[#0A99EF]"
+                            >
+                                <img src="/assets/img/leaderboard.svg" class="size-[24px] block group-hover:hidden" />
+                                <img src="/assets/img/leaderboard-blue.svg" class="size-[24px] hidden group-hover:block" />
+                                <span>Leaderboard</span>
+                            </a>
+                        </li>
+                        <li class="flex-1 group">
+                            <a
+                                href="/activity.html"
+                                class="flex items-center justify-center gap-x-1.5 py-2.5 px-4 border-b-4 border-transparent hover:text-[#0A99EF] hover:border-[#0A99EF]"
+                            >
+                                <img src="/assets/img/activity.svg" class="size-[24px] block group-hover:hidden" />
+                                <img src="/assets/img/activity-blue.svg" class="size-[24px] hidden group-hover:block" />
+                                <span>Activity</span>
+                            </a>
+                        </li>
+
+                        <li class="flex-1">
+                            <a
+                                href="/settings.html"
+                                class="flex items-center justify-center gap-x-1.5 py-2.5 px-4 border-b-4 text-[#0A99EF] border-[#0A99EF]"
+                            >
+                                <img src="/assets/img/settings-blue.svg" class="size-[24px]" />
+                                <span>Settings</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="w-full space-y-5 pb-24 md:pb-0">
+                    <!-- Offer Details Grid 1 -->
+                    <div class="grid gap-y-5 md:grid-cols-2 md:gap-x-9">
+                        <div class="space-y-3 md:space-y-7">
+                            <div class="flex items-center gap-x-[14px]">
+                                <img src="assets/img/cardimage.png" class="w-[66px] h-[66px] min-w-[66px] rounded-2xl overflow-hidden" />
+                                <div>
+                                    <h1 class="text-[#354D6F] text-lg md:text-2xl !leading-[100%] font-bold">Username</h1>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+                                <div class="flex bg-white flex-col gap-y-1 justify-center items-center p-2.5 rounded-xl">
+                                    <p class="text-xs text-[#424B5A]">Rewards</p>
+                                    <div class="flex items-center gap-x-[4px]">
+                                        <span class="text-[18px] md:text-[22px] font-bold text-[#424B5A]">3283</span>
+                                        <img src="/assets/img/bitcoin.svg" class="size-[22px] min-w-[22px] md:w-[24px] md:min-w-[24px]" />
+                                    </div>
+                                </div>
+                                <div class="hidden md:flex bg-white flex-col gap-y-1 justify-center items-center p-2.5 rounded-xl">
+                                    <p class="text-xs text-[#424B5A]">Checkin’s</p>
+                                    <span class="text-[18px] md:text-[22px] font-bold text-[#424B5A]">3283</span>
+                                </div>
+                                <div class="flex bg-white flex-col gap-y-1 justify-center items-center p-2.5 rounded-xl">
+                                    <p class="text-xs text-[#424B5A]">Experience</p>
+                                    <div class="flex items-center gap-x-[4px]">
+                                        <span class="text-[18px] md:text-[22px] font-bold text-[#424B5A]">Silver</span>
+                                        <img src="/assets/img/tier.svg" class="size-[22px] min-w-[22px] md:w-[24px] md:min-w-[24px]" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-xl px-4 py-6">
+                            <div class="flex justify-between">
+                                <div class="flex flex-col gap-y-4 md:gap-y-5">
+                                    <img class="w-[58px] h-[66px]" src="/assets/img/tier-big.svg" />
+                                    <h1 class="text-[18px] text-[#354D6F]"><span class="font-bold"> Silver</span> Tier</h1>
+                                </div>
+                                <div class="flex items-baseline gap-x-3 pt-1">
+                                    <img class="size-fit min-w-[22px]" src="/assets/img/tier-gold.svg" />
+                                    <img class="size-fit min-w-[22px]" src="/assets/img/tier-diomond.svg" />
+                                    <img class="size-fit min-w-[22px]" src="/assets/img/tier-rubi.svg" />
+                                </div>
+                            </div>
+                            <div class="space-y-px">
+                                <div class="flex justify-end">
+                                    <p class="text-[#354D6F] text-xs leading-[19px]">
+                                        100 Exp To Reach <span class="text-[#FF9F40]">GOLD</span> Tier
+                                    </p>
+                                </div>
+                                <div class="w-full bg-[#F2F2F2] rounded-full h-[12px]">
+                                    <div class="bg-[#3B96F7] h-full rounded-full" style="width: 45%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="space-y-5 md:col-span-full">
+                            <div class="pb-5 border-b border-[#354D6F]/15 w-full">
+                                <h2 class="text-[#354D6F] text-base leading-[120%] font-bold">Settings</h2>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-y-5 gap-x-12">
+                                <div class="space-y-5">
+                                    <div class="space-y-px">
+                                        <p class="text-[#354D6F]/80 text-[13px] leading-[150%]">Select your device</p>
+                                        <div class="grid grid-cols-2 gap-x-3">
+                                            <button
+                                                class="text-[16px] bg-[#0A99EF] text-white rounded-xl py-3 px-5 flex items-center justify-center gap-x-1"
+                                            >
+                                                <img src="/assets/img/android-white.svg" class="size-5 min-w-5" alt="Android Icon" />
+                                                <span>Android</span>
+                                            </button>
+                                            <button
+                                                class="text-[16px] bg-white text-[#354D6F] rounded-xl py-3 px-5 flex items-center justify-center gap-x-1"
+                                            >
+                                                <img src="/assets/img/ios.svg" class="size-5 min-w-5" alt="iOS Icon" />
+                                                <span>iOS</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="space-y-px">
+                                        <p class="text-[#354D6F]/80 text-[13px] leading-[150%]">Show me offers where I have to spend money.</p>
+                                        <div class="grid grid-cols-2 gap-x-3">
+                                            <button class="text-[16px] text-[#354D6F] bg-white rounded-xl py-3 px-5">Yes</button>
+                                            <button class="text-[16px] bg-[#0A99EF] text-white rounded-xl py-3 px-5">No</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="space-y-5">
+                                    <div class="space-y-px">
+                                        <p class="text-[#354D6F]/80 text-[13px] leading-[150%]">Show me on the leaderboard</p>
+                                        <div class="grid grid-cols-2 gap-x-3">
+                                            <button class="text-[16px] text-[#354D6F] bg-white rounded-xl py-3 px-5">Yes</button>
+                                            <button class="text-[16px] bg-[#0A99EF] text-white rounded-xl py-3 px-5">No</button>
+                                        </div>
+                                    </div>
+                                    <div class="space-y-px">
+                                        <p class="text-[#354D6F]/80 text-[13px] leading-[150%]">Send me an email with</p>
+                                        <div class="grid grid-cols-2 gap-x-3">
+                                            <button class="text-[16px] text-[#354D6F] bg-white rounded-xl py-3 px-5">Yes</button>
+                                            <button class="text-[16px] bg-[#0A99EF] text-white rounded-xl py-3 px-5">No</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

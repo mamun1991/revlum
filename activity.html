@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <!-- cdns -->
+        <!-- alpine js -->
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.0/dist/cdn.min.js"></script>
+        <!-- tailwindcss -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <!-- Inter -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    </head>
+    <body class="bg-[#F4F6F9] font-['Inter',_sans-serif]">
+        <main class="relative min-h-screen">
+            <!-- -==========navigation for mobile view============== -->
+            <div class="md:hidden fixed bottom-0 w-full z-50 bg-white">
+                <ul class="flex flex-wrap -mb-px gap-x-[4px] text-[10px] leading-[165%] text-[#354D6F]">
+                    <li class="flex-1 flex justify-center -mt-[6px]">
+                        <a href="/activity.html">
+                            <div
+                                class="flex flex-col items-center justify-center py-3 text-white rounded-xl gap-y-[4px] bg-gradient-to-b from-[#0D81EE] to-[#03C3EF] w-[74px]"
+                            >
+                                <img src="/assets/img/activity-white.svg" class="size-[24px] text-white" />
+                                <span>Activity</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="flex-1">
+                        <a href="/checkin.html" class="flex flex-col items-center justify-center py-4 gap-y-[4px]">
+                            <img src="/assets/img/checkin.svg" class="size-[24px]" />
+                            <span> Check In</span>
+                        </a>
+                    </li>
+                    <li class="flex-1">
+                        <a href="/home.html" class="flex flex-col items-center justify-center py-4 gap-y-[4px]">
+                            <img src="/assets/img/reward-gray.svg" class="size-[24px]" />
+                            <span>Rewards</span>
+                        </a>
+                    </li>
+                    <li class="flex-1">
+                        <a href="/leaderboard.html" class="flex flex-col items-center justify-center py-4 gap-y-[4px]">
+                            <img src="/assets/img/leaderboard.svg" class="size-[24px]" />
+                            <span>Leaderboard</span>
+                        </a>
+                    </li>
+                    <li class="flex-1">
+                        <a href="/settings.html" class="flex flex-col items-center justify-center py-4 gap-y-[4px]">
+                            <img src="/assets/img/setting.svg" class="size-[24px]" />
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- content -->
+            <div class="container mx-auto px-4 lg:px-9 space-y-5 md:space-y-0">
+                <header class="py-3 md:pt-8">
+                    <a href="/home.html">
+                        <img src="/assets/img/logo.svg" alt="logo" class="w-[120px] h-[40px] min-w-[20px]" />
+                    </a>
+                </header>
+                <!-- desktop navigation -->
+                <div class="hidden md:block border-b border-[#354D6F33]">
+                    <ul class="flex flex-wrap items-center gap-x-2.5 -mb-px text-base font-semibold text-center text-[#354D6F]">
+                        <li class="flex-1 group">
+                            <a
+                                href="/home.html"
+                                class="flex items-center justify-center gap-x-1.5 py-2.5 px-4 border-b-4 border-transparent hover:text-[#0A99EF] hover:border-[#0A99EF]"
+                            >
+                                <img src="/assets/img/reward-gray.svg" class="size-[24px] block group-hover:hidden" />
+                                <img src="/assets/img/reward.svg" class="size-[24px] hidden group-hover:block" />
+                                <span>Rewards</span>
+                            </a>
+                        </li>
+                        <li class="flex-1 group">
+                            <a
+                                href="/checkin.html"
+                                class="flex items-center justify-center gap-x-1.5 py-2.5 px-4 border-b-4 border-transparent hover:text-[#0A99EF] hover:border-[#0A99EF]"
+                            >
+                                <img src="/assets/img/checkin.svg" class="size-[24px] block group-hover:hidden" />
+                                <img src="/assets/img/checkin-blue.svg" class="size-[24px] hidden group-hover:block" />
+                                <span>Check In</span>
+                            </a>
+                        </li>
+                        <li class="flex-1 group">
+                            <a
+                                href="/leaderboard.html"
+                                class="flex items-center justify-center gap-x-1.5 py-2.5 px-4 border-b-4 border-transparent hover:text-[#0A99EF] hover:border-[#0A99EF]"
+                            >
+                                <img src="/assets/img/leaderboard.svg" class="size-[24px] block group-hover:hidden" />
+                                <img src="/assets/img/leaderboard-blue.svg" class="size-[24px] hidden group-hover:block" />
+                                <span>Leaderboard</span>
+                            </a>
+                        </li>
+                        <li class="flex-1">
+                            <a
+                                href="/activity.html"
+                                class="flex items-center justify-center gap-x-1.5 py-2.5 px-4 border-b-4 text-[#0A99EF] border-[#0A99EF]"
+                            >
+                                <img src="/assets/img/activity-blue.svg" class="size-[24px]" />
+                                <span>Activity</span>
+                            </a>
+                        </li>
+                        <li class="flex-1 group">
+                            <a
+                                href="/settings.html"
+                                class="flex items-center justify-center gap-x-1.5 py-2.5 px-4 border-b-4 border-transparent hover:text-[#0A99EF] hover:border-[#0A99EF]"
+                            >
+                                <img src="/assets/img/settings.svg" class="size-[24px] block group-hover:hidden" />
+                                <img src="/assets/img/settings-blue.svg" class="size-[24px] hidden group-hover:block" />
+                                <span>Settings</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- activity -->
+                <div class="w-full md:h-[calc(100vh-152px)] flex flex-col justify-center items-center md:!-mt-[100px] text-center">
+                    <img class="size-[160px] min-w-[160px]" src="/assets/img/Wallet_empty.svg" />
+                    <h1 class="text-xl md:text-2xl text-[#424B5A] font-medium mt-9">There is no activity.</h1>
+                    <p class="text-base leading-[22px] md:text-lg text-[#424B5A] mt-2.5">Start completing offers to earn more coins</p>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

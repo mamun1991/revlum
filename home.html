@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <!-- cdns -->
+        <!-- alpine js -->
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.0/dist/cdn.min.js"></script>
+        <!-- tailwindcss -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <!-- Inter -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    </head>
+    <body class="bg-[#F4F6F9] font-['Inter',_sans-serif]">
+        <main class="relative min-h-screen">
+            <!-- -==========navigation for mobile view============== -->
+            <div class="md:hidden fixed bottom-0 w-full z-50 bg-white">
+                <ul class="flex flex-wrap -mb-px gap-x-[4px] text-[10px] leading-[165%] text-[#354D6F]">
+                    <li class="flex-1">
+                        <a href="/activity.html" class="flex flex-col items-center justify-center py-4 gap-y-[4px]">
+                            <img src="assets/img/activity.svg" class="size-[24px]" />
+                            <span> Activity</span>
+                        </a>
+                    </li>
+                    <li class="flex-1">
+                        <a href="/checkin.html" class="flex flex-col items-center justify-center py-4 gap-y-[4px]">
+                            <img src="assets/img/checkin.svg" class="size-[24px]" />
+                            <span> Check In</span>
+                        </a>
+                    </li>
+                    <li class="flex-1 flex justify-center -mt-[6px]">
+                        <a href="/home.html">
+                            <div
+                                class="flex flex-col items-center justify-center py-3 text-white rounded-xl gap-y-[4px] bg-gradient-to-b from-[#0D81EE] to-[#03C3EF] w-[74px]"
+                            >
+                                <img src="assets/img/reward-white.svg" class="size-[24px] text-white" />
+                                <span>Rewards</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="flex-1">
+                        <a href="/leaderboard.html" class="flex flex-col items-center justify-center py-4 gap-y-[4px]">
+                            <img src="assets/img/leaderboard.svg" class="size-[24px]" />
+                            <span>Leaderboard</span>
+                        </a>
+                    </li>
+                    <li class="flex-1">
+                        <a href="/settings.html" class="flex flex-col items-center justify-center py-4 gap-y-[4px]">
+                            <img src="assets/img/settings.svg" class="size-[24px]" />
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- content -->
+            <div class="container mx-auto px-4 lg:px-9">
+                <header class="py-3 md:pt-8">
+                    <a href="/home.html">
+                        <img src="assets/img/logo.svg" alt="logo" class="w-[120px] h-[40px] min-w-[20px]" />
+                    </a>
+                </header>
+
+                <!-- desktop navigation -->
+                <div class="hidden md:block border-b border-[#354D6F33]">
+                    <ul class="flex flex-wrap items-center gap-x-2.5 -mb-px text-base font-semibold text-center text-[#354D6F]">
+                        <li class="flex-1">
+                            <a
+                                href="/home.html"
+                                class="flex items-center justify-center gap-x-1.5 py-2.5 px-4 border-b-4 text-[#0A99EF] border-[#0A99EF]"
+                            >
+                                <img src="/assets/img/reward.svg" class="size-[24px]" />
+                                <span>Rewards</span>
+                            </a>
+                        </li>
+                        <li class="flex-1 group">
+                            <a
+                                href="/checkin.html"
+                                class="flex items-center justify-center gap-x-1.5 py-2.5 px-4 border-b-4 border-transparent hover:text-[#0A99EF] hover:border-[#0A99EF]"
+                            >
+                                <img src="/assets/img/checkin.svg" class="size-[24px] block group-hover:hidden" />
+                                <img src="/assets/img/checkin-blue.svg" class="size-[24px] hidden group-hover:block" />
+                                <span>Check In</span>
+                            </a>
+                        </li>
+                        <li class="flex-1 group">
+                            <a
+                                href="/leaderboard.html"
+                                class="flex items-center justify-center gap-x-1.5 py-2.5 px-4 border-b-4 border-transparent hover:text-[#0A99EF] hover:border-[#0A99EF]"
+                            >
+                                <img src="/assets/img/leaderboard.svg" class="size-[24px] block group-hover:hidden" />
+                                <img src="/assets/img/leaderboard-blue.svg" class="size-[24px] hidden group-hover:block" />
+                                <span>Leaderboard</span>
+                            </a>
+                        </li>
+                        <li class="flex-1 group">
+                            <a
+                                href="/activity.html"
+                                class="flex items-center justify-center gap-x-1.5 py-2.5 px-4 border-b-4 border-transparent hover:text-[#0A99EF] hover:border-[#0A99EF]"
+                            >
+                                <img src="/assets/img/activity.svg" class="size-[24px] block group-hover:hidden" />
+                                <img src="/assets/img/activity-blue.svg" class="size-[24px] hidden group-hover:block" />
+                                <span>Activity</span>
+                            </a>
+                        </li>
+                        <li class="flex-1 group">
+                            <a
+                                href="/settings.html"
+                                class="flex items-center justify-center gap-x-1.5 py-2.5 px-4 border-b-4 border-transparent hover:text-[#0A99EF] hover:border-[#0A99EF]"
+                            >
+                                <img src="/assets/img/settings.svg" class="size-[24px] block group-hover:hidden" />
+                                <img src="/assets/img/settings-blue.svg" class="size-[24px] hidden group-hover:block" />
+                                <span>Settings</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- main content -->
+                <div class="w-full mt-4 md:mt-6 relative 0">
+                    <!-- cards -->
+                    <div class="w-full md:grid md:grid-cols-2 flex flex-col gap-4">
+                        <div
+                            class="flex flex-col gap-y-1.5 md:gap-y-4 bg-white rounded-[18px] md:rounded-xl p-2 overflow-hidden border border-transparent hover:border-[#F4B536] hover:bg-[#F8B550]/15 group relative"
+                        >
+                            <div class="hidden group-hover:block size-[88px] bg-[#F4B536] absolute -top-[44px] -right-[44px] rounded-full"></div>
+                            <button class="group-hover:block absolute top-[10px] right-[10px]">
+                                <img src="/assets/img/star.svg" alt="star" class="size-[15px]" />
+                            </button>
+                            <div class="flex items-center gap-x-[8px] md:gap-x-[14px]">
+                                <img src="assets/img/cardimage.png" class="size-[66px] min-w-[66px] rounded-2xl overflow-hidden" />
+                                <div class="grow">
+                                    <h1 class="text-[#354D6F] text-sm md:text-lg leading-[17px] md:leading-[22px] font-bold">Wishing Well</h1>
+                                    <p class="text-[#354D6F] text-xs md:text-[13px] md:leading-[19px] opacity-80">
+                                        Play and reach as far as you can.
+                                    </p>
+                                </div>
+                            </div>
+                            <button
+                                class="w-full rounded-xl bg-[#0A99EF] group-hover:bg-[#F4B536] text-white flex items-center justify-center py-1.5 gap-x-[4px] text-xs md:text-sm md:leading-[18px] font-bold"
+                            >
+                                <img src="assets/img/coin.png" class="coin-img" alt="Coin" class="size-[18px] min-w-[18px]" />
+                                <span>44985 Points</span>
+                            </button>
+                        </div>
+
+                        <div
+                            class="flex flex-col gap-y-1.5 md:gap-y-4 bg-white rounded-[18px] md:rounded-xl p-2 overflow-hidden border border-transparent hover:border-[#F4B536] hover:bg-[#F8B550]/15 group relative"
+                        >
+                            <div class="hidden group-hover:block size-[88px] bg-[#F4B536] absolute -top-[44px] -right-[44px] rounded-full"></div>
+                            <button class="group-hover:block absolute top-[10px] right-[10px]">
+                                <img src="/assets/img/star.svg" alt="star" class="size-[15px]" />
+                            </button>
+                            <div class="flex items-center gap-x-[8px] md:gap-x-[14px]">
+                                <img src="assets/img/cardimage.png" class="size-[66px] min-w-[66px] rounded-2xl overflow-hidden" />
+                                <div class="grow">
+                                    <h1 class="text-[#354D6F] text-sm md:text-lg leading-[17px] md:leading-[22px] font-bold">Wishing Well</h1>
+                                    <p class="text-[#354D6F] text-xs md:text-[13px] md:leading-[19px] opacity-80">
+                                        Play and reach as far as you can.
+                                    </p>
+                                </div>
+                            </div>
+                            <button
+                                class="w-full rounded-xl bg-[#0A99EF] group-hover:bg-[#F4B536] text-white flex items-center justify-center py-1.5 gap-x-[4px] text-xs md:text-sm md:leading-[18px] font-bold"
+                            >
+                                <img src="assets/img/coin.png" class="coin-img" alt="Coin" class="size-[18px] min-w-[18px]" />
+                                <span>44985 Points</span>
+                            </button>
+                        </div>
+
+                        <div
+                            class="flex flex-col gap-y-1.5 md:gap-y-4 bg-white rounded-[18px] md:rounded-xl p-2 overflow-hidden border border-transparent hover:border-[#F4B536] hover:bg-[#F8B550]/15 group relative"
+                        >
+                            <div class="hidden group-hover:block size-[88px] bg-[#F4B536] absolute -top-[44px] -right-[44px] rounded-full"></div>
+                            <button class="group-hover:block absolute top-[10px] right-[10px]">
+                                <img src="/assets/img/star.svg" alt="star" class="size-[15px]" />
+                            </button>
+                            <div class="flex items-center gap-x-[8px] md:gap-x-[14px]">
+                                <img src="assets/img/cardimage.png" class="size-[66px] min-w-[66px] rounded-2xl overflow-hidden" />
+                                <div class="grow">
+                                    <h1 class="text-[#354D6F] text-sm md:text-lg leading-[17px] md:leading-[22px] font-bold">Wishing Well</h1>
+                                    <p class="text-[#354D6F] text-xs md:text-[13px] md:leading-[19px] opacity-80">
+                                        Play and reach as far as you can.
+                                    </p>
+                                </div>
+                            </div>
+                            <button
+                                class="w-full rounded-xl bg-[#0A99EF] group-hover:bg-[#F4B536] text-white flex items-center justify-center py-1.5 gap-x-[4px] text-xs md:text-sm md:leading-[18px] font-bold"
+                            >
+                                <img src="assets/img/coin.png" class="coin-img" alt="Coin" class="size-[18px] min-w-[18px]" />
+                                <span>44985 Points</span>
+                            </button>
+                        </div>
+
+                        <div
+                            class="flex flex-col gap-y-1.5 md:gap-y-4 bg-white rounded-[18px] md:rounded-xl p-2 overflow-hidden border border-transparent hover:border-[#F4B536] hover:bg-[#F8B550]/15 group relative"
+                        >
+                            <div class="hidden group-hover:block size-[88px] bg-[#F4B536] absolute -top-[44px] -right-[44px] rounded-full"></div>
+                            <button class="group-hover:block absolute top-[10px] right-[10px]">
+                                <img src="/assets/img/star.svg" alt="star" class="size-[15px]" />
+                            </button>
+                            <div class="flex items-center gap-x-[8px] md:gap-x-[14px]">
+                                <img src="assets/img/cardimage.png" class="size-[66px] min-w-[66px] rounded-2xl overflow-hidden" />
+                                <div class="grow">
+                                    <h1 class="text-[#354D6F] text-sm md:text-lg leading-[17px] md:leading-[22px] font-bold">Wishing Well</h1>
+                                    <p class="text-[#354D6F] text-xs md:text-[13px] md:leading-[19px] opacity-80">
+                                        Play and reach as far as you can.
+                                    </p>
+                                </div>
+                            </div>
+                            <button
+                                class="w-full rounded-xl bg-[#0A99EF] group-hover:bg-[#F4B536] text-white flex items-center justify-center py-1.5 gap-x-[4px] text-xs md:text-sm md:leading-[18px] font-bold"
+                            >
+                                <img src="assets/img/coin.png" class="coin-img" alt="Coin" class="size-[18px] min-w-[18px]" />
+                                <span>44985 Points</span>
+                            </button>
+                        </div>
+
+                        <div
+                            class="flex flex-col gap-y-1.5 md:gap-y-4 bg-white rounded-[18px] md:rounded-xl p-2 overflow-hidden border border-transparent hover:border-[#F4B536] hover:bg-[#F8B550]/15 group relative"
+                        >
+                            <div class="hidden group-hover:block size-[88px] bg-[#F4B536] absolute -top-[44px] -right-[44px] rounded-full"></div>
+                            <button class="group-hover:block absolute top-[10px] right-[10px]">
+                                <img src="/assets/img/star.svg" alt="star" class="size-[15px]" />
+                            </button>
+                            <div class="flex items-center gap-x-[8px] md:gap-x-[14px]">
+                                <img src="assets/img/cardimage.png" class="size-[66px] min-w-[66px] rounded-2xl overflow-hidden" />
+                                <div class="grow">
+                                    <h1 class="text-[#354D6F] text-sm md:text-lg leading-[17px] md:leading-[22px] font-bold">Wishing Well</h1>
+                                    <p class="text-[#354D6F] text-xs md:text-[13px] md:leading-[19px] opacity-80">
+                                        Play and reach as far as you can.
+                                    </p>
+                                </div>
+                            </div>
+                            <button
+                                class="w-full rounded-xl bg-[#0A99EF] group-hover:bg-[#F4B536] text-white flex items-center justify-center py-1.5 gap-x-[4px] text-xs md:text-sm md:leading-[18px] font-bold"
+                            >
+                                <img src="assets/img/coin.png" class="coin-img" alt="Coin" class="size-[18px] min-w-[18px]" />
+                                <span>44985 Points</span>
+                            </button>
+                        </div>
+
+                        <div
+                            class="flex flex-col gap-y-1.5 md:gap-y-4 bg-white rounded-[18px] md:rounded-xl p-2 overflow-hidden border border-transparent hover:border-[#F4B536] hover:bg-[#F8B550]/15 group relative"
+                        >
+                            <div class="hidden group-hover:block size-[88px] bg-[#F4B536] absolute -top-[44px] -right-[44px] rounded-full"></div>
+                            <button class="group-hover:block absolute top-[10px] right-[10px]">
+                                <img src="/assets/img/star.svg" alt="star" class="size-[15px]" />
+                            </button>
+                            <div class="flex items-center gap-x-[8px] md:gap-x-[14px]">
+                                <img src="assets/img/cardimage.png" class="size-[66px] min-w-[66px] rounded-2xl overflow-hidden" />
+                                <div class="grow">
+                                    <h1 class="text-[#354D6F] text-sm md:text-lg leading-[17px] md:leading-[22px] font-bold">Wishing Well</h1>
+                                    <p class="text-[#354D6F] text-xs md:text-[13px] md:leading-[19px] opacity-80">
+                                        Play and reach as far as you can.
+                                    </p>
+                                </div>
+                            </div>
+                            <button
+                                class="w-full rounded-xl bg-[#0A99EF] group-hover:bg-[#F4B536] text-white flex items-center justify-center py-1.5 gap-x-[4px] text-xs md:text-sm md:leading-[18px] font-bold"
+                            >
+                                <img src="assets/img/coin.png" class="coin-img" alt="Coin" class="size-[18px] min-w-[18px]" />
+                                <span>44985 Points</span>
+                            </button>
+                        </div>
+
+                        <div
+                            class="flex flex-col gap-y-1.5 md:gap-y-4 bg-white rounded-[18px] md:rounded-xl p-2 overflow-hidden border border-transparent hover:border-[#F4B536] hover:bg-[#F8B550]/15 group relative"
+                        >
+                            <div class="hidden group-hover:block size-[88px] bg-[#F4B536] absolute -top-[44px] -right-[44px] rounded-full"></div>
+                            <button class="group-hover:block absolute top-[10px] right-[10px]">
+                                <img src="/assets/img/star.svg" alt="star" class="size-[15px]" />
+                            </button>
+                            <div class="flex items-center gap-x-[8px] md:gap-x-[14px]">
+                                <img src="assets/img/cardimage.png" class="size-[66px] min-w-[66px] rounded-2xl overflow-hidden" />
+                                <div class="grow">
+                                    <h1 class="text-[#354D6F] text-sm md:text-lg leading-[17px] md:leading-[22px] font-bold">Wishing Well</h1>
+                                    <p class="text-[#354D6F] text-xs md:text-[13px] md:leading-[19px] opacity-80">
+                                        Play and reach as far as you can.
+                                    </p>
+                                </div>
+                            </div>
+                            <button
+                                class="w-full rounded-xl bg-[#0A99EF] group-hover:bg-[#F4B536] text-white flex items-center justify-center py-1.5 gap-x-[4px] text-xs md:text-sm md:leading-[18px] font-bold"
+                            >
+                                <img src="assets/img/coin.png" class="coin-img" alt="Coin" class="size-[18px] min-w-[18px]" />
+                                <span>44985 Points</span>
+                            </button>
+                        </div>
+
+                        <div
+                            class="flex flex-col gap-y-1.5 md:gap-y-4 bg-white rounded-[18px] md:rounded-xl p-2 overflow-hidden border border-transparent hover:border-[#F4B536] hover:bg-[#F8B550]/15 group relative"
+                        >
+                            <div class="hidden group-hover:block size-[88px] bg-[#F4B536] absolute -top-[44px] -right-[44px] rounded-full"></div>
+                            <button class="group-hover:block absolute top-[10px] right-[10px]">
+                                <img src="/assets/img/star.svg" alt="star" class="size-[15px]" />
+                            </button>
+                            <div class="flex items-center gap-x-[8px] md:gap-x-[14px]">
+                                <img src="assets/img/cardimage.png" class="size-[66px] min-w-[66px] rounded-2xl overflow-hidden" />
+                                <div class="grow">
+                                    <h1 class="text-[#354D6F] text-sm md:text-lg leading-[17px] md:leading-[22px] font-bold">Wishing Well</h1>
+                                    <p class="text-[#354D6F] text-xs md:text-[13px] md:leading-[19px] opacity-80">
+                                        Play and reach as far as you can.
+                                    </p>
+                                </div>
+                            </div>
+                            <button
+                                class="w-full rounded-xl bg-[#0A99EF] group-hover:bg-[#F4B536] text-white flex items-center justify-center py-1.5 gap-x-[4px] text-xs md:text-sm md:leading-[18px] font-bold"
+                            >
+                                <img src="assets/img/coin.png" class="coin-img" alt="Coin" class="size-[18px] min-w-[18px]" />
+                                <span>44985 Points</span>
+                            </button>
+                        </div>
+
+                        <div
+                            class="flex flex-col gap-y-1.5 md:gap-y-4 bg-white rounded-[18px] md:rounded-xl p-2 overflow-hidden border border-transparent hover:border-[#F4B536] hover:bg-[#F8B550]/15 group relative"
+                        >
+                            <div class="hidden group-hover:block size-[88px] bg-[#F4B536] absolute -top-[44px] -right-[44px] rounded-full"></div>
+                            <button class="group-hover:block absolute top-[10px] right-[10px]">
+                                <img src="/assets/img/star.svg" alt="star" class="size-[15px]" />
+                            </button>
+                            <div class="flex items-center gap-x-[8px] md:gap-x-[14px]">
+                                <img src="assets/img/cardimage.png" class="size-[66px] min-w-[66px] rounded-2xl overflow-hidden" />
+                                <div class="grow">
+                                    <h1 class="text-[#354D6F] text-sm md:text-lg leading-[17px] md:leading-[22px] font-bold">Wishing Well</h1>
+                                    <p class="text-[#354D6F] text-xs md:text-[13px] md:leading-[19px] opacity-80">
+                                        Play and reach as far as you can.
+                                    </p>
+                                </div>
+                            </div>
+                            <button
+                                class="w-full rounded-xl bg-[#0A99EF] group-hover:bg-[#F4B536] text-white flex items-center justify-center py-1.5 gap-x-[4px] text-xs md:text-sm md:leading-[18px] font-bold"
+                            >
+                                <img src="assets/img/coin.png" class="coin-img" alt="Coin" class="size-[18px] min-w-[18px]" />
+                                <span>44985 Points</span>
+                            </button>
+                        </div>
+
+                        <div
+                            class="flex flex-col gap-y-1.5 md:gap-y-4 bg-white rounded-[18px] md:rounded-xl p-2 overflow-hidden border border-transparent hover:border-[#F4B536] hover:bg-[#F8B550]/15 group relative"
+                        >
+                            <div class="hidden group-hover:block size-[88px] bg-[#F4B536] absolute -top-[44px] -right-[44px] rounded-full"></div>
+                            <button class="group-hover:block absolute top-[10px] right-[10px]">
+                                <img src="/assets/img/star.svg" alt="star" class="size-[15px]" />
+                            </button>
+                            <div class="flex items-center gap-x-[8px] md:gap-x-[14px]">
+                                <img src="assets/img/cardimage.png" class="size-[66px] min-w-[66px] rounded-2xl overflow-hidden" />
+                                <div class="grow">
+                                    <h1 class="text-[#354D6F] text-sm md:text-lg leading-[17px] md:leading-[22px] font-bold">Wishing Well</h1>
+                                    <p class="text-[#354D6F] text-xs md:text-[13px] md:leading-[19px] opacity-80">
+                                        Play and reach as far as you can.
+                                    </p>
+                                </div>
+                            </div>
+                            <button
+                                class="w-full rounded-xl bg-[#0A99EF] group-hover:bg-[#F4B536] text-white flex items-center justify-center py-1.5 gap-x-[4px] text-xs md:text-sm md:leading-[18px] font-bold"
+                            >
+                                <img src="assets/img/coin.png" class="coin-img" alt="Coin" class="size-[18px] min-w-[18px]" />
+                                <span>44985 Points</span>
+                            </button>
+                        </div>
+
+                        <div
+                            class="flex flex-col gap-y-1.5 md:gap-y-4 bg-white rounded-[18px] md:rounded-xl p-2 overflow-hidden border border-transparent hover:border-[#F4B536] hover:bg-[#F8B550]/15 group relative"
+                        >
+                            <div class="hidden group-hover:block size-[88px] bg-[#F4B536] absolute -top-[44px] -right-[44px] rounded-full"></div>
+                            <button class="group-hover:block absolute top-[10px] right-[10px]">
+                                <img src="/assets/img/star.svg" alt="star" class="size-[15px]" />
+                            </button>
+                            <div class="flex items-center gap-x-[8px] md:gap-x-[14px]">
+                                <img src="assets/img/cardimage.png" class="size-[66px] min-w-[66px] rounded-2xl overflow-hidden" />
+                                <div class="grow">
+                                    <h1 class="text-[#354D6F] text-sm md:text-lg leading-[17px] md:leading-[22px] font-bold">Wishing Well</h1>
+                                    <p class="text-[#354D6F] text-xs md:text-[13px] md:leading-[19px] opacity-80">
+                                        Play and reach as far as you can.
+                                    </p>
+                                </div>
+                            </div>
+                            <button
+                                class="w-full rounded-xl bg-[#0A99EF] group-hover:bg-[#F4B536] text-white flex items-center justify-center py-1.5 gap-x-[4px] text-xs md:text-sm md:leading-[18px] font-bold"
+                            >
+                                <img src="assets/img/coin.png" class="coin-img" alt="Coin" class="size-[18px] min-w-[18px]" />
+                                <span>44985 Points</span>
+                            </button>
+                        </div>
+
+                        <div
+                            class="flex flex-col gap-y-1.5 md:gap-y-4 bg-white rounded-[18px] md:rounded-xl p-2 overflow-hidden border border-transparent hover:border-[#F4B536] hover:bg-[#F8B550]/15 group relative"
+                        >
+                            <div class="hidden group-hover:block size-[88px] bg-[#F4B536] absolute -top-[44px] -right-[44px] rounded-full"></div>
+                            <button class="group-hover:block absolute top-[10px] right-[10px]">
+                                <img src="assets/img/star.svg" alt="star" class="size-[15px]" />
+                            </button>
+                            <div class="flex items-center gap-x-[8px] md:gap-x-[14px]">
+                                <img src="assets/img/cardimage.png" class="size-[66px] min-w-[66px] rounded-2xl overflow-hidden" />
+                                <div class="grow">
+                                    <h1 class="text-[#354D6F] text-sm md:text-lg leading-[17px] md:leading-[22px] font-bold">Wishing Well</h1>
+                                    <p class="text-[#354D6F] text-xs md:text-[13px] md:leading-[19px] opacity-80">
+                                        Play and reach as far as you can.
+                                    </p>
+                                </div>
+                            </div>
+                            <button
+                                class="w-full rounded-xl bg-[#0A99EF] group-hover:bg-[#F4B536] text-white flex items-center justify-center py-1.5 gap-x-[4px] text-xs md:text-sm md:leading-[18px] font-bold"
+                            >
+                                <img src="assets/img/coin.png" class="coin-img" alt="Coin" class="size-[18px] min-w-[18px]" />
+                                <span>44985 Points</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- filter -->
+            <div class="fixed bottom-[120px] md:bottom-[72px] right-[26px] md:right-[50px]">
+                <div x-data="{ dropdownOpen: false }" @keydown.window.escape="dropdownOpen = false" @click.away="dropdownOpen = false" x-ref="ts">
+                    <button
+                        @click="dropdownOpen = !dropdownOpen"
+                        type="button"
+                        aria-haspopup="true"
+                        x-bind:aria-expanded="dropdownOpen"
+                        aria-expanded="true"
+                        class="flex items-center gap-x-[6px] bg-white rounded-xl px-4 py-3"
+                    >
+                        <img src="assets/img/filter.svg" alt="Filter Icon" x-bind:class="h-[16px] w-[14px]" />
+                        <span class="text-[#354D6F] text-xs font-bold">Filter</span>
+                    </button>
+
+                    <div class="relative">
+                        <div
+                            x-data="{
+                                'style': {'tb': 'bottom', 'lr': 'left'},
+                                checkSize () {
+                                    let size = $el.scrollHeight || $refs.ts.getBoundingClientRect().top || 88,
+                                    sizeBottom = $el.getBoundingClientRect().bottom || $refs.ts.getBoundingClientRect().bottom,
+                                    sizeLeft = $el.getBoundingClientRect().left || $refs.ts.getBoundingClientRect().left;
+                                    let arr = {'tb': 'bottom', 'lr': 'left'};
+                                    if ((window.innerHeight - sizeBottom) < (size + $el.offsetHeight)) arr.tb = 'top';
+                                    if (sizeLeft < 200) arr.lr = 'right';
+                                    return arr;
+                                }
+                            }"
+                            x-init="style = checkSize();"
+                            @resize.window="style = checkSize();"
+                            x-show="dropdownOpen"
+                            x-transition:enter="transition ease-out duration-100"
+                            x-transition:enter-start="transform opacity-0 scale-95"
+                            x-transition:enter-end="transform opacity-100 scale-100"
+                            x-transition:leave="transition ease-in duration-75"
+                            x-transition:leave-start="transform opacity-100 scale-100"
+                            x-transition:leave-end="transform opacity-0 scale-95"
+                            class="origin-top-right absolute bg-white mb-2 w-80 md:w-96 rounded-xl shadow-lg z-40 right-[26px]"
+                            :class="{ 'bottom-10': style.tb === 'top', 'right-0': style.lr === 'left' }"
+                            style="display: none"
+                        >
+                            <div class="flex p-4 rounded-xl flex-col">
+                                <div class="flex justify-between w-full border-b border-[#354D6F1A] pb-2">
+                                    <h4 class="text-[#354D6F] text-lg leading-[22px] font-semibold">Filter</h4>
+                                    <button @click="dropdownOpen = false">
+                                        <img class="h-4 w-4 cursor-pointer" src="assets/img/close.svg" alt="Close Icon" />
+                                    </button>
+                                </div>
+                                <div class="w-full mt-[16px]">
+                                    <label for="search" class="relative">
+                                        <img
+                                            src="assets/img/filter-search.svg"
+                                            alt="Search Icon"
+                                            class="size-4 absolute top-1/2 left-3 -translate-y-1/2"
+                                        />
+                                        <input
+                                            type="search"
+                                            id="search"
+                                            class="w-full bg-[#F3F4F7] rounded-xl py-2.5 pl-9 pr-4 text-[#354D6F] text-xs leading-[120%]"
+                                            placeholder="Bingo Blitz"
+                                        />
+                                    </label>
+                                </div>
+                                <div class="w-full flex gap-4 mt-[16px] text-[12px] leading-[14px] font-medium text-[#354D6F] tracking-[0.72]">
+                                    <div class="w-full">
+                                        <h4 class="text-[#3B4C7A] text-sm leading-4">Short By:</h4>
+                                        <div class="mt-3 flex flex-col gap-y-1.5">
+                                            <button class="bg-[#0A99EF] rounded-xl py-1.5 px-3 flex justify-center items-center text-white gap-x-2">
+                                                <span>Recommended</span>
+                                                <img src="assets/img/tick.svg" alt="tik" class="size-4" />
+                                            </button>
+                                            <button class="bg-[#F3F4F7] rounded-xl py-1.5 px-3">High to Low</button>
+                                            <button class="bg-[#F3F4F7] text-[#354D6F] rounded-xl py-1.5 px-3">Low to High</button>
+                                            <button class="bg-[#F3F4F7] text-[#354D6F] rounded-xl py-1.5 px-3">New to Old</button>
+                                            <button class="bg-[#F3F4F7] text-[#354D6F] rounded-xl py-1.5 px-3">Old to New</button>
+                                        </div>
+                                    </div>
+                                    <div class="w-px bg-[#354D6F1A] h-[120px]"></div>
+                                    <div class="w-full">
+                                        <h4 class="text-[#3B4C7A] text-sm leading-4">Short By:</h4>
+                                        <div class="mt-3 flex flex-col gap-y-1.5 text-[12px] font-medium text-[#354D6F]">
+                                            <button class="bg-[#F3F4F7] rounded-xl py-1.5 px-3 flex justify-center items-center gap-x-5">
+                                                <span>MultiReward</span>
+                                                <img src="assets/img/plus.svg" alt="plus" class="size-4" />
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
